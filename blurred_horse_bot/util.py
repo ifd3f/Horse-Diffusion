@@ -5,7 +5,12 @@ from mastodon import Mastodon
 
 
 def get_random_photo():
-    photo = random.choice(flickr_api.Photo.search(tags=["horse"]))
+    search_results = flickr_api.Photo.search(
+        tags=["horse"],
+        per_page=500,
+        page=random.randint(1, 50),
+    )
+    photo = random.choice(search_results)
     print(f"Found image {photo}")
     return photo
 

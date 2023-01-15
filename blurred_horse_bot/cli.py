@@ -73,6 +73,5 @@ def init_apis():
         username=os.environ["MASTODON_EMAIL"],
         password=os.environ["MASTODON_PASSWORD"],
         scopes=["read", "write"],
-        to_file="pytooter_usercred.secret",
     )
     return mastodon
