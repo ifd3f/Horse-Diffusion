@@ -7,14 +7,19 @@ license = "AGPL-3.0"
 readme = "README.md"
 packages = [{include = "blurred_horse_bot"}]
 
+[tool.poetry.scripts]
+blurred-horse-bot = "blurred_horse_bot:cli"
+
 [tool.poetry.dependencies]
 python = "^3.10"
 flickr-api = "^0.7.6"
-"pleroma.py" = "^0.0.2"
+pillow = "^9.4.0"
+click = "^8.1.3"
 
 
 [tool.poetry.group.dev.dependencies]
 setuptools = "^65.7.0"
+black = "^22.12.0"
 
 [build-system]
 requires = ["poetry-core"]
