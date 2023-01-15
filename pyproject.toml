@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "blurred-horse-bot"
+version = "0.1.0"
+description = ""
+authors = ["Astrid Yu <astrid@astrid.tech>"]
+license = "AGPL-3.0"
+readme = "README.md"
+packages = [{include = "blurred_horse_bot"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flickr-api = "^0.7.6"
+"pleroma.py" = "^0.0.2"
+
+
+[tool.poetry.group.dev.dependencies]
+setuptools = "^65.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
