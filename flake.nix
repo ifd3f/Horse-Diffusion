@@ -18,6 +18,12 @@
           (old: { buildInputs = old.buildInputs ++ [ prev.setuptools ]; });
       });
     in {
+      overlays.default = final: prev: {
+        inherit (self.packages.${prev.system}) blurred-horse-bot;
+      };
+
+      nixosModules.default = ./nixos-module.nix;
+
       packages = forAllSystems (system:
         let pkgs = nixpkgs.legacyPackages.${system};
         in {

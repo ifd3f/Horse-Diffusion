@@ -20,6 +20,9 @@ MAX_PHOTO_DIM = 600
 def cli(show):
     """
     "Totally Stable Diffusion" is an advanced AI that posts diffused images from stables.
+
+    The following environment variables are required: FLICKR_API, FLICKR_SECRET,
+    MASTODON_APPDATA, MASTODON_EMAIL, and MASTODON_PASSWORD.
     """
 
     mastodon = init_apis()
